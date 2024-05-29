@@ -30,4 +30,10 @@ ALTER TABLE moon ADD COLUMN name VARCHAR(100);
 ALTER TABLE galaxy ADD COLUMN major_axis_diameter NUMERIC(15);
 ALTER TABLE galaxy ADD COLUMN minor_axis_diameter NUMERIC(15);
 
+-- Add text data column description for each table
+ALTER TABLE galaxy ADD COLUMN description TEXT;
+ALTER TABLE star ADD COLUMN description TEXT;
+ALTER TABLE planet ADD COLUMN description TEXT;
+ALTER TABLE moon ADD COLUMN description TEXT;
+
 
