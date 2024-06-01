@@ -36,8 +36,9 @@ ALTER TABLE star ADD COLUMN description TEXT;
 ALTER TABLE planet ADD COLUMN description TEXT;
 ALTER TABLE moon ADD COLUMN description TEXT;
 
--- Add year discovered column for planet table
+-- Add year discovered column for planet and moon table
 ALTER TABLE planet ADD COLUMN year_discovered INTEGER;
+ALTER TABLE moon ADD COLUMN year_discovered INTEGER;
 
 -- Add foreign key with moon id
 ALTER TABLE planet ADD COLUMN moon_id INT NOT NULL;
