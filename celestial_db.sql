@@ -47,3 +47,7 @@ ALTER TABLE planet ADD FOREIGN KEY(moon_id) REFERENCES moon(moon_id);
 -- Each "star" should have a foreign key that references one of the rows in galaxy
 ALTER TABLE star ADD COLUMN galaxy_id INT NOT NULL;
 ALTER TABLE star ADD FOREIGN KEY(galaxy_id) REFERENCES galaxy(galaxy_id);
+
+-- You should use the BOOLEAN data type on at least two columns
+ALTER TABLE star ADD COLUMN has_planets BOOLEAN NOT NULL;
+ALTER TABLE galaxy ADD COLUMN is_spiral BOLLEAN NOT NULL;
