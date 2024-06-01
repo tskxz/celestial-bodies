@@ -44,3 +44,6 @@ ALTER TABLE moon ADD COLUMN year_discovered INTEGER;
 ALTER TABLE planet ADD COLUMN moon_id INT NOT NULL;
 ALTER TABLE planet ADD FOREIGN KEY(moon_id) REFERENCES moon(moon_id);
 
+-- Each "star" should have a foreign key that references one of the rows in galaxy
+ALTER TABLE star ADD COLUMN galaxy_id INT NOT NULL;
+ALTER TABLE star ADD FOREIGN KEY(galaxy_id) REFERENCES galaxy(galaxy_id);
