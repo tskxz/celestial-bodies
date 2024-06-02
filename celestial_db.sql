@@ -16,7 +16,7 @@ ALTER TABLE star ADD COLUMN star_id SERIAL NOT NULL;
 ALTER TABLE star ADD PRIMARY KEY(star_id);
 
 ALTER TABLE planet ADD COLUMN planet_id SERIAL NOT NULL;
-ALTER TABLE planet ADD PRIMARY KEY(planet_id)
+ALTER TABLE planet ADD PRIMARY KEY(planet_id);
 
 ALTER TABLE moon ADD COLUMN moon_id SERIAL NOT NULL;
 ALTER TABLE moon ADD PRIMARY KEY(moon_id);
@@ -33,7 +33,7 @@ ALTER TABLE black_hole ADD COLUMN name VARCHAR(40) NOT NULL UNIQUE;
 
 -- Galaxy Table
 ALTER TABLE galaxy ADD COLUMN is_spiral BOOLEAN NOT NULL;
-ALTER TABLE galaxy distance_from_earth INT NOT NULL;
+ALTER TABLE galaxy ADD COLUMN distance_from_earth INT NOT NULL;
 ALTER TABLE galaxy ADD COLUMN description TEXT NOT NULL;
 
 -- Star Table
