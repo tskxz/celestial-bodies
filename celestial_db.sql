@@ -36,4 +36,18 @@ ALTER TABLE star ADD COLUMN description TEXT;
 ALTER TABLE planet ADD COLUMN description TEXT;
 ALTER TABLE moon ADD COLUMN description TEXT;
 
+-- Add year discovered column for planet and moon table
+ALTER TABLE planet ADD COLUMN year_discovered INTEGER;
+ALTER TABLE moon ADD COLUMN year_discovered INTEGER;
 
+-- Add foreign key with moon id
+ALTER TABLE planet ADD COLUMN moon_id INT NOT NULL;
+ALTER TABLE planet ADD FOREIGN KEY(moon_id) REFERENCES moon(moon_id);
+
+-- Each "star" should have a foreign key that references one of the rows in galaxy
+ALTER TABLE star ADD COLUMN galaxy_id INT NOT NULL;
+ALTER TABLE star ADD FOREIGN KEY(galaxy_id) REFERENCES galaxy(galaxy_id);
+
+-- You should use the BOOLEAN data type on at least two columns
+ALTER TABLE star ADD COLUMN has_planets BOOLEAN NOT NULL;
+ALTER TABLE galaxy ADD COLUMN is_spiral BOOLEAN NOT NULL;
