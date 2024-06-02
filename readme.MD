@@ -1,6 +1,8 @@
 ## Celestial Database
 
 ![img](Diagram.drawio.png)  
+
+### Complete the tasks below
 You should create a database named universe  
 Be sure to connect to your database with \c universe. Then, you should add tables named galaxy, star, planet, and moon  
 Each table should have a primary key  
