@@ -268,6 +268,9 @@ ALTER TABLE ONLY public.star ALTER COLUMN star_id SET DEFAULT nextval('public.st
 -- Data for Name: black_hole; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
+INSERT INTO public.black_hole VALUES (1, 'Cygnus X-1', 1, 14.80, 44);
+INSERT INTO public.black_hole VALUES (2, 'GRO J1655-40', 1, 6.30, 18);
+INSERT INTO public.black_hole VALUES (3, 'V404 Cygni', 1, 12.00, 36);
 
 
 --
@@ -279,6 +282,7 @@ INSERT INTO public.galaxy VALUES (2, 'Andromeda', true, 2500000, 'The nearest ma
 INSERT INTO public.galaxy VALUES (3, 'Triangulum', true, 3000000, 'The third-largest galaxy in the Local Group');
 INSERT INTO public.galaxy VALUES (4, 'Whirlpool', true, 23000000, 'A grand design spiral galaxy');
 INSERT INTO public.galaxy VALUES (5, 'Sombrero', false, 28000000, 'An unbarred spiral galaxy with a prominent central bulge');
+INSERT INTO public.galaxy VALUES (6, 'Sombrero2', false, 28000000, 'An unbarred spiral galaxy with a prominent central bulge');
 
 
 --
@@ -286,38 +290,38 @@ INSERT INTO public.galaxy VALUES (5, 'Sombrero', false, 28000000, 'An unbarred s
 --
 
 INSERT INTO public.moon VALUES (1, 'Luna', 0, 3, 'Our Moon');
-INSERT INTO public.moon VALUES (2, 'Phobos', 1877, 4, 'The larger and closer of the two moons of Mars');
-INSERT INTO public.moon VALUES (3, 'Deimos', 1877, 4, 'The smaller and more distant of the two moons of Mars');
-INSERT INTO public.moon VALUES (4, 'Io', 1610, 5, 'The innermost of the four Galilean moons of Jupiter');
-INSERT INTO public.moon VALUES (5, 'Europa', 1610, 5, 'The smallest of the four Galilean moons of Jupiter');
-INSERT INTO public.moon VALUES (6, 'Ganymede', 1610, 5, 'The largest moon in the Solar System');
-INSERT INTO public.moon VALUES (7, 'Callisto', 1610, 5, 'The second-largest moon in the Solar System');
-INSERT INTO public.moon VALUES (8, 'Titan', 1655, 6, 'The largest moon of Saturn');
-INSERT INTO public.moon VALUES (9, 'Triton', 1846, 7, 'The largest natural satellite of Neptune');
-INSERT INTO public.moon VALUES (10, 'Rhea', 1672, 5, 'The second-largest moon of Saturn');
-INSERT INTO public.moon VALUES (11, 'Iapetus', 1671, 5, 'A moon of Saturn');
-INSERT INTO public.moon VALUES (12, 'Dione', 1684, 5, 'A moon of Saturn');
-INSERT INTO public.moon VALUES (13, 'Enceladus', 1789, 5, 'A moon of Saturn');
-INSERT INTO public.moon VALUES (14, 'Mimas', 1789, 5, 'A moon of Saturn');
-INSERT INTO public.moon VALUES (15, 'Hyperion', 1848, 5, 'A moon of Saturn');
-INSERT INTO public.moon VALUES (16, 'Ariel', 1851, 7, 'A moon of Uranus');
-INSERT INTO public.moon VALUES (17, 'Umbriel', 1851, 7, 'A moon of Uranus');
-INSERT INTO public.moon VALUES (18, 'Titania', 1787, 7, 'The largest moon of Uranus');
-INSERT INTO public.moon VALUES (19, 'Oberon', 1787, 7, 'The second-largest moon of Uranus');
-INSERT INTO public.moon VALUES (20, 'Miranda', 1948, 7, 'A moon of Uranus');
-INSERT INTO public.moon VALUES (21, 'Triton2', 1846, 8, 'The largest natural satellite of Neptune');
-INSERT INTO public.moon VALUES (22, 'Nereid', 1949, 8, 'A moon of Neptune');
-INSERT INTO public.moon VALUES (23, 'Proteus', 1989, 8, 'A moon of Neptune');
-INSERT INTO public.moon VALUES (24, 'Larissa', 1981, 8, 'A moon of Neptune');
-INSERT INTO public.moon VALUES (25, 'Galatea', 1989, 8, 'A moon of Neptune');
-INSERT INTO public.moon VALUES (26, 'Despina', 1989, 8, 'A moon of Neptune');
-INSERT INTO public.moon VALUES (27, 'Thalassa', 1989, 8, 'A moon of Neptune');
-INSERT INTO public.moon VALUES (28, 'Naiad', 1989, 8, 'A moon of Neptune');
-INSERT INTO public.moon VALUES (29, 'Charon', 1978, 9, 'The largest moon of Pluto');
-INSERT INTO public.moon VALUES (30, 'Styx', 2012, 9, 'A moon of Pluto');
-INSERT INTO public.moon VALUES (31, 'Nix', 2005, 9, 'A moon of Pluto');
-INSERT INTO public.moon VALUES (32, 'Kerberos', 2011, 9, 'A moon of Pluto');
-INSERT INTO public.moon VALUES (33, 'Hydra', 2005, 9, 'A moon of Pluto');
+INSERT INTO public.moon VALUES (2, 'Phobos', 1877, 3, 'The larger and closer of the two moons of Mars');
+INSERT INTO public.moon VALUES (3, 'Deimos', 1877, 3, 'The smaller and more distant of the two moons of Mars');
+INSERT INTO public.moon VALUES (5, 'Io', 1610, 2, 'The innermost of the four Galilean moons of Jupiter');
+INSERT INTO public.moon VALUES (6, 'Europa', 1610, 3, 'The smallest of the four Galilean moons of Jupiter');
+INSERT INTO public.moon VALUES (7, 'Ganymede', 1610, 4, 'The largest moon in the Solar System');
+INSERT INTO public.moon VALUES (8, 'Callisto', 1610, 5, 'The second-largest moon in the Solar System');
+INSERT INTO public.moon VALUES (9, 'Titan', 1655, 6, 'The largest moon of Saturn');
+INSERT INTO public.moon VALUES (10, 'Triton', 1846, 7, 'The largest natural satellite of Neptune');
+INSERT INTO public.moon VALUES (11, 'Rhea', 1672, 5, 'The second-largest moon of Saturn');
+INSERT INTO public.moon VALUES (12, 'Iapetus', 1671, 5, 'A moon of Saturn');
+INSERT INTO public.moon VALUES (13, 'Dione', 1684, 5, 'A moon of Saturn');
+INSERT INTO public.moon VALUES (14, 'Enceladus', 1789, 5, 'A moon of Saturn');
+INSERT INTO public.moon VALUES (15, 'Mimas', 1789, 5, 'A moon of Saturn');
+INSERT INTO public.moon VALUES (16, 'Hyperion', 1848, 5, 'A moon of Saturn');
+INSERT INTO public.moon VALUES (17, 'Ariel', 1851, 7, 'A moon of Uranus');
+INSERT INTO public.moon VALUES (18, 'Umbriel', 1851, 7, 'A moon of Uranus');
+INSERT INTO public.moon VALUES (19, 'Titania', 1787, 7, 'The largest moon of Uranus');
+INSERT INTO public.moon VALUES (20, 'Oberon', 1787, 7, 'The second-largest moon of Uranus');
+INSERT INTO public.moon VALUES (21, 'Miranda', 1948, 7, 'A moon of Uranus');
+INSERT INTO public.moon VALUES (22, 'Triton2', 1846, 8, 'The largest natural satellite of Neptune');
+INSERT INTO public.moon VALUES (23, 'Nereid', 1949, 8, 'A moon of Neptune');
+INSERT INTO public.moon VALUES (24, 'Proteus', 1989, 8, 'A moon of Neptune');
+INSERT INTO public.moon VALUES (25, 'Larissa', 1981, 8, 'A moon of Neptune');
+INSERT INTO public.moon VALUES (26, 'Galatea', 1989, 8, 'A moon of Neptune');
+INSERT INTO public.moon VALUES (27, 'Despina', 1989, 8, 'A moon of Neptune');
+INSERT INTO public.moon VALUES (28, 'Thalassa', 1989, 8, 'A moon of Neptune');
+INSERT INTO public.moon VALUES (29, 'Naiad', 1989, 8, 'A moon of Neptune');
+INSERT INTO public.moon VALUES (30, 'Charon', 1978, 9, 'The largest moon of Pluto');
+INSERT INTO public.moon VALUES (31, 'Styx', 2012, 9, 'A moon of Pluto');
+INSERT INTO public.moon VALUES (32, 'Nix', 2005, 9, 'A moon of Pluto');
+INSERT INTO public.moon VALUES (33, 'Kerberos', 2011, 9, 'A moon of Pluto');
+INSERT INTO public.moon VALUES (34, 'Hydra', 2005, 9, 'A moon of Pluto');
 
 
 --
@@ -334,10 +338,11 @@ INSERT INTO public.planet VALUES (7, 'Uranus', 1781, 1, 'The seventh planet from
 INSERT INTO public.planet VALUES (8, 'Neptune', 1846, 1, 'The eighth planet from the Sun');
 INSERT INTO public.planet VALUES (9, 'Proxima Centauri b', 2016, 2, 'An exoplanet orbiting Proxima Centauri');
 INSERT INTO public.planet VALUES (10, 'Rigel b', 1991, 3, 'A hot Jupiter exoplanet orbiting Rigel');
-INSERT INTO public.planet VALUES (11, 'Betelgeuse b', 2009, 4, 'A massive exoplanet orbiting Betelgeuse');
-INSERT INTO public.planet VALUES (12, 'Polaris Ab', 2006, 5, 'A massive exoplanet orbiting Polaris');
-INSERT INTO public.planet VALUES (13, 'Vega b', 2006, 6, 'A massive exoplanet orbiting Vega');
-INSERT INTO public.planet VALUES (14, 'Sirius B', 1862, 7, 'A white dwarf star orbiting Sirius');
+INSERT INTO public.planet VALUES (11, 'Betelgeuse b', 2009, 3, 'A massive exoplanet orbiting Betelgeuse');
+INSERT INTO public.planet VALUES (12, 'Polaris Ab', 2006, 3, 'A massive exoplanet orbiting Polaris');
+INSERT INTO public.planet VALUES (13, 'Vega b', 2006, 3, 'A massive exoplanet orbiting Vega');
+INSERT INTO public.planet VALUES (14, 'Sirius B', 1862, 3, 'A white dwarf star orbiting Sirius');
+INSERT INTO public.planet VALUES (15, 'Sirius C', 1862, 3, 'A white dwarf star orbiting Sirius');
 
 
 --
@@ -350,47 +355,41 @@ INSERT INTO public.star VALUES (3, 'Rigel', 17.00, false, 'A blue supergiant sta
 INSERT INTO public.star VALUES (4, 'Betelgeuse', 20.00, false, 'A red supergiant star in the constellation Orion', 1);
 INSERT INTO public.star VALUES (5, 'Polaris', 5.00, true, 'The North Star', 1);
 INSERT INTO public.star VALUES (6, 'Vega', 2.10, true, 'A bright star in the constellation Lyra', 1);
-INSERT INTO public.star VALUES (7, 'Sirius', 2.10, true, 'The brightest star in the night sky', 1);
-INSERT INTO public.star VALUES (8, 'Canopus', 8.00, false, 'The second brightest star in the night sky', 2);
-INSERT INTO public.star VALUES (9, 'Rigel2', 17.00, false, 'A blue supergiant star in the constellation Orion', 2);
-INSERT INTO public.star VALUES (10, 'Deneb', 20.00, false, 'A white supergiant star in the constellation Cygnus', 2);
-INSERT INTO public.star VALUES (11, 'Capella', 2.50, true, 'The brightest star in the constellation Auriga', 3);
-INSERT INTO public.star VALUES (12, 'Arcturus', 25.00, false, 'The brightest star in the constellation Boötes', 3);
 
 
 --
 -- Name: black_hole_black_hole_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.black_hole_black_hole_id_seq', 1, false);
+SELECT pg_catalog.setval('public.black_hole_black_hole_id_seq', 3, true);
 
 
 --
 -- Name: galaxy_galaxy_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.galaxy_galaxy_id_seq', 5, true);
+SELECT pg_catalog.setval('public.galaxy_galaxy_id_seq', 6, true);
 
 
 --
 -- Name: moon_moon_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.moon_moon_id_seq', 33, true);
+SELECT pg_catalog.setval('public.moon_moon_id_seq', 34, true);
 
 
 --
 -- Name: planet_planet_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.planet_planet_id_seq', 14, true);
+SELECT pg_catalog.setval('public.planet_planet_id_seq', 15, true);
 
 
 --
 -- Name: star_star_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.star_star_id_seq', 12, true);
+SELECT pg_catalog.setval('public.star_star_id_seq', 6, true);
 
 
 --
